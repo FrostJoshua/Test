@@ -3,9 +3,9 @@ Raleway Template
 http://www.templatemo.com/preview/templatemo_421_raleway
 */
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700);
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 .overlay h4 {
     position: relative;
@@ -953,7 +953,7 @@ span[class*="border-"] {
     right: 20px;
     width: 50px;
     height: 50px;
-    background: url("../img/shape-1.png") no-repeat;
+
 }
 
 .shape-2 {
@@ -962,7 +962,7 @@ span[class*="border-"] {
     left: 20px;
     width: 50px;
     height: 50px;
-    background: url("../img/shape-2.png") no-repeat;
+
 }
 
 .main-button,.main-footer .social li a {

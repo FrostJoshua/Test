@@ -18,9 +18,9 @@
 
 
 
-					<div class="site-branding" style="padding:40px">
+					<div class="site-branding" style="padding-left:30px">
 
-						<a href="#">	<img src="img/SQUADWATCH.png" alt="" style="height:auto;width:10%;"></a>
+						<a href="#">	<img src="img/SQUADWATCH.png" alt="" style="height:auto;width:20%;"></a>
 					</div>
 
 
@@ -56,7 +56,7 @@
 	</header>
 
 
-<div	style="padding:40px;">
+<div	style="padding-left:20px;">
 
 				<div id="twitch-embed"></div>
 
@@ -104,14 +104,14 @@ var wid = window.innerWidth
 var hid = window.innerHeight
 
 document.getElementById("twitch-chat-embed").src = chaturl
-document.getElementById("twitch-chat-embed").width = wid*.9
+document.getElementById("twitch-chat-embed").width = wid
 document.getElementById("twitch-chat-embed").height = hid*.3
 		new Twitch.Player("twitch-embed", {
 		width: wid,
 		height: hid,
 		channel: chan,
 		parent: ["thepixelscript.github.io"]})
-		document.getElementById("twitch-embed").width = wid*.9
+		document.getElementById("twitch-embed").width = wid
 		document.getElementById("twitch-embed").height = hid*.6
 };}, 200);
 
