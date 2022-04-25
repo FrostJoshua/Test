@@ -56,7 +56,7 @@
 	</header>
 
 
-<div	style="padding-left:20px;">
+<div id="bod" style="padding-left:20px;">
 
 				<div id="twitch-embed"></div>
 
@@ -99,8 +99,9 @@ var chan = document.getElementsByName("channel")[0].value;
 var chaturl = "https://www.twitch.tv/embed/";
 chaturl += chan;
 chaturl += "/chat?parent=thepixelscript.github.io";
+var bod = document.getElementById("bod")
 var wid = window.innerWidth
-
+wid -= 100
 var hid = window.innerHeight
 
 document.getElementById("twitch-chat-embed").src = chaturl
