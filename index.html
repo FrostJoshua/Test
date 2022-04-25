@@ -59,13 +59,19 @@
 		<div id="menu-1" class="homepage home-section container">
 			<div class="home-intro text-center">
 				<div id="twitch-embed"></div>
+				<iframe id="twitch-chat-embed"
+        src="https://www.twitch.tv/embed/monstercat/chat?parent=thepixelscript.github.io"
+        height="500"
+        width="1138">
+</iframe>
+
 
 				<!-- Load the Twitch embed JavaScript file -->
 				<script src="https://embed.twitch.tv/embed/v1.js"></script>
 				<script type="text/javascript">
-new Twitch.Embed("twitch-embed", {
+new Twitch.Player("twitch-embed", {
 width: 1138,
-height: 800,
+height: 600,
 channel: "monstercat",
 // Only needed if this page is going to be embedded on other websites
 parent: ["thepixelscript.github.io"]
