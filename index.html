@@ -16,7 +16,7 @@
 <body>
 	<header class="site-header container animated fadeInDown">
 
-
+<input type="hidden" name="channel" value="">
 				<div class="col-md-4">
 					<div class="site-branding">
 						<a href="#">	<img src="img/SQUADWATCH.png" alt="" style="width:250px;height:250px;"></a>
@@ -58,24 +58,64 @@
 	<div id="menu-container">
 		<div id="menu-1" class="homepage home-section container">
 			<div class="home-intro text-center">
+
 				<div id="twitch-embed"></div>
+
 				<iframe id="twitch-chat-embed"
         src="https://www.twitch.tv/embed/monstercat/chat?parent=thepixelscript.github.io"
         height="500"
         width="1138">
 </iframe>
 
-
 				<!-- Load the Twitch embed JavaScript file -->
 				<script src="https://embed.twitch.tv/embed/v1.js"></script>
 				<script type="text/javascript">
-new Twitch.Player("twitch-embed", {
-width: 1138,
-height: 600,
-channel: "monstercat",
-// Only needed if this page is going to be embedded on other websites
-parent: ["thepixelscript.github.io"]
-});
+
+
+
+
+				var queryForm = function(settings){
+					var reset = settings && settings.reset ? settings.reset : false;
+					var self = window.location.toString();
+					var querystring = self.split("?");
+					if (querystring.length > 1) {
+						var pairs = querystring[1].split("&");
+						for (i in pairs) {
+							var keyval = pairs[i].split("=");
+							if (reset || sessionStorage.getItem(keyval[0]) === null) {
+								sessionStorage.setItem(keyval[0], decodeURIComponent(keyval[1]));
+							}
+						}
+					}
+					var hiddenFields = document.querySelectorAll("input[type=hidden], input[type=text]");
+					for (var i=0; i<hiddenFields.length; i++) {
+						var param = sessionStorage.getItem(hiddenFields[i].name);
+					
+						if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param;
+					}
+				}
+
+  setTimeout(function(){queryForm();
+		if (document.getElementsByName("channel")[0].value != null)
+		{
+var chan = document.getElementsByName("channel")[0].value;
+var chaturl = "https://www.twitch.tv/embed/";
+chaturl += chan;
+chaturl += "/chat?parent=thepixelscript.github.io";
+document.getElementById("twitch-chat-embed").src = chaturl
+		new Twitch.Player("twitch-embed", {
+		width: 1138,
+		height: 800,
+		channel: chan,
+		parent: ["thepixelscript.github.io"]
+	})};}, 200);
+
+
+
+
+
+
+
 </script>
 				<!--
 				<h2 class="welcome-title animated fadeInLeft">Introduction</h2>
