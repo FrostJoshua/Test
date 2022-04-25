@@ -14,14 +14,16 @@
 	<link rel="stylesheet" href="css/templatemo_style.css">
 </head>
 <body>
-	<header class="site-header container animated fadeInDown">
+	<header class="animated fadeInDown">
 
-<input type="hidden" name="channel" value="">
-				<div class="col-md-4">
-					<div class="site-branding">
-						<a href="#">	<img src="img/SQUADWATCH.png" alt="" style="width:250px;height:250px;"></a>
+
+
+					<div class="site-branding" style="padding:40px">
+
+						<a href="#">	<img src="img/SQUADWATCH.png" alt="" style="height:auto;width:10%;"></a>
 					</div>
-				</div>
+
+
 				<!--
 				<a href="#" class="toggle-nav hidden-md hidden-lg">
 					<i class="fa fa-bars"></i>
@@ -51,27 +53,22 @@
 
 
 
-		</div>
 	</header>
 
 
-	<div id="menu-container">
-		<div id="menu-1" class="homepage home-section container">
-			<div class="home-intro text-center">
+<div	style="padding:40px;">
 
 				<div id="twitch-embed"></div>
 
 				<iframe id="twitch-chat-embed"
-        src="https://www.twitch.tv/embed/monstercat/chat?parent=thepixelscript.github.io"
-        height="500"
-        width="1138">
+        src="https://www.twitch.tv/embed/monstercat/chat?parent=thepixelscript.github.io">
 </iframe>
 
 				<!-- Load the Twitch embed JavaScript file -->
 				<script src="https://embed.twitch.tv/embed/v1.js"></script>
 				<script type="text/javascript">
 
-
+;
 
 
 				var queryForm = function(settings){
@@ -90,7 +87,7 @@
 					var hiddenFields = document.querySelectorAll("input[type=hidden], input[type=text]");
 					for (var i=0; i<hiddenFields.length; i++) {
 						var param = sessionStorage.getItem(hiddenFields[i].name);
-					
+
 						if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param;
 					}
 				}
@@ -102,13 +99,21 @@ var chan = document.getElementsByName("channel")[0].value;
 var chaturl = "https://www.twitch.tv/embed/";
 chaturl += chan;
 chaturl += "/chat?parent=thepixelscript.github.io";
+var wid = window.innerWidth
+
+var hid = window.innerHeight
+
 document.getElementById("twitch-chat-embed").src = chaturl
+document.getElementById("twitch-chat-embed").width = wid*.9
+document.getElementById("twitch-chat-embed").height = hid*.3
 		new Twitch.Player("twitch-embed", {
-		width: 1138,
-		height: 800,
+		width: wid,
+		height: hid,
 		channel: chan,
-		parent: ["thepixelscript.github.io"]
-	})};}, 200);
+		parent: ["thepixelscript.github.io"]})
+		document.getElementById("twitch-embed").width = wid*.9
+		document.getElementById("twitch-embed").height = hid*.6
+};}, 200);
 
 
 
@@ -117,6 +122,9 @@ document.getElementById("twitch-chat-embed").src = chaturl
 
 
 </script>
+
+
+		</div>
 				<!--
 				<h2 class="welcome-title animated fadeInLeft">Introduction</h2>
 				<p class="animated fadeInRight">Raleway HTML5 template is provided by <span class="blue">template</span><span class="green">mo</span>. Credit goes to <a href="http://unsplash.com">Unsplash</a> for photos. Feel free to modify and use this layout for any personal or commercial website.</p>
@@ -128,7 +136,7 @@ document.getElementById("twitch-chat-embed").src = chaturl
 				</ul>
 
 			-->
-		</div>
+
 
 					<!--
 			<div class="home-projects">
@@ -181,7 +189,7 @@ document.getElementById("twitch-chat-embed").src = chaturl
 				</div>
 			</div>
 		-->
-		</div>
+
 
 
 
@@ -214,4 +222,5 @@ document.getElementById("twitch-chat-embed").src = chaturl
 	<script src="js/jquery.min.js"></script>
 	<script src="js/templatemo_custom.js"></script>
 </body>
+<input type="hidden" name="channel" value="">
 </html>

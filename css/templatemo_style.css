@@ -1,5 +1,5 @@
-/* 
-Raleway Template 
+/*
+Raleway Template
 http://www.templatemo.com/preview/templatemo_421_raleway
 */
 
@@ -73,12 +73,12 @@ html {
 }
 
 .site-header {
-    margin-bottom: 80px;
+    margin-bottom: 10px;
 }
 
 .header-wrapper {
     border-bottom: 2px solid #46494f;
-    padding: 60px 0;
+    padding: 10px 0;
     position: relative;
 }
 
@@ -115,6 +115,8 @@ nav.main-navigation {
     margin-top: 10px;
 }
 
+
+
 @media screen and (max-width: 992px) {
     nav.main-navigation {
         margin-top: 20px;
@@ -130,17 +132,21 @@ nav.main-navigation {
 
 @media screen and (min-width: 993px) {
     .container {
-        padding-right: 40px;
-        padding-left: 40px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 }
 
 @media screen and (max-width: 1040px) {
     .container {
-        padding-right: 40px;
-        padding-left: 40px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 }
+
+
+
+
 
 ul.main-menu li {
     display: inline-block;
@@ -162,6 +168,8 @@ ul.main-menu li a.active {
     ul.main-menu {
         background: #26282c;
         padding: 10px 0;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     ul.main-menu li {
