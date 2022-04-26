@@ -63,7 +63,9 @@
 						if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param;
 					}
 				}
-
+				window.addEventListener("orientationchange", event => {
+				  resize();
+				});
 				window.onresize = resize();
 				function resize() {
 					var wid = window.innerWidth
