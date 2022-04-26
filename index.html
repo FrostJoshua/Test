@@ -32,9 +32,9 @@
 
 <div id="bod" style="padding-left:20px;">
 
-				<div id="twitch-embed" ></div>
+				<div id="twitch-embed" style="width:100%;" ></div>
 
-				<iframe id="twitch-chat-embed"
+				<iframe id="twitch-chat-embed style="width:100%;""
         src="https://www.twitch.tv/embed/monstercat/chat?parent=thepixelscript.github.io">
 </iframe>
 
@@ -63,26 +63,12 @@
 						if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param;
 					}
 				}
-				window.addEventListener("orientationchange", event => {
-				  resize();
-				});
-				window.onresize = resize();
-				function resize() {
-					var wid = window.innerWidth
-					wid -= 80
-					var hid = window.innerHeight
-					var chatHeight = hid*.75;
-					if (chatHeight < 500)
-					{
-					var chatHeight = 500;
-					}
 
-					document.getElementById("twitch-chat-embed").height = chatHeight;
-					document.getElementById("twitch-chat-embed").width = wid;
-					document.getElementById("twitch-embed").width = wid;
 
-					document.getElementById("twitch-embed").height = hid*.75;
-				}
+
+
+
+			
 function getchan(){
 	queryForm();
 		if (document.getElementsByName("channel")[0].value != null)
