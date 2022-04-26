@@ -32,9 +32,9 @@
 
 <div id="bod" style="padding-left:20px;">
 
-				<div id="twitch-embed" style="width:100%;" ></div>
+				<div id="twitch-embed"></div>
 
-				<iframe id="twitch-chat-embed" style="width:100%;"
+				<iframe id="twitch-chat-embed"
         src="https://www.twitch.tv/embed/monstercat/chat?parent=thepixelscript.github.io">
 </iframe>
 
@@ -83,23 +83,22 @@ wid -= 80
 var hid = window.innerHeight
 
 document.getElementById("twitch-chat-embed").src = chaturl;
-document.getElementById("twitch-chat-embed").width = wid;
+//document.getElementById("twitch-chat-embed").width = wid;
 var chatHeight = hid*.75;
 if (chatHeight < 500)
 {
 var chatHeight = 500;
 }
 
-document.getElementById("twitch-chat-embed").height = chatHeight;
+//document.getElementById("twitch-chat-embed").height = chatHeight;
 
 		new Twitch.Player("twitch-embed", {
-		width: wid,
-		height: hid,
+
 		channel: chan,
 		parent: ["thepixelscript.github.io"]})
-		document.getElementById("twitch-embed").width = wid;
+	//	document.getElementById("twitch-embed").width = wid;
 
-		document.getElementById("twitch-embed").height = hid*.75;
+	//	document.getElementById("twitch-embed").height = hid*.75;
 };
 }
 
@@ -117,23 +116,21 @@ wid -= 80
 var hid = window.innerHeight
 
 document.getElementById("twitch-chat-embed").src = chaturl;
-document.getElementById("twitch-chat-embed").width = wid;
+//document.getElementById("twitch-chat-embed").width = wid;
 var chatHeight = hid*.75;
 if (chatHeight < 500)
 {
 var chatHeight = 500;
 }
 
-document.getElementById("twitch-chat-embed").height = chatHeight;
+//document.getElementById("twitch-chat-embed").height = chatHeight;
 
 		new Twitch.Player("twitch-embed", {
-		width: wid,
-		height: hid,
 		channel: chan,
 		parent: ["thepixelscript.github.io"]})
-		document.getElementById("twitch-embed").width = wid;
+	//	document.getElementById("twitch-embed").width = wid;
 
-		document.getElementById("twitch-embed").height = hid*.75;
+	//	document.getElementById("twitch-embed").height = hid*.75;
 }
 else{
 	var chan = "monstercat";
