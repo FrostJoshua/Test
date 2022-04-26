@@ -64,7 +64,23 @@
 					}
 				}
 
-				window.onresize = getchan();
+				window.onresize = resize();
+				function resize() {
+					var wid = window.innerWidth
+					wid -= 80
+					var hid = window.innerHeight
+					var chatHeight = hid*.75;
+					if (chatHeight < 500)
+					{
+					var chatHeight = 500;
+					}
+
+					document.getElementById("twitch-chat-embed").height = chatHeight;
+					document.getElementById("twitch-chat-embed").width = wid;
+					document.getElementById("twitch-embed").width = wid;
+
+					document.getElementById("twitch-embed").height = hid*.75;
+				}
 function getchan(){
 	queryForm();
 		if (document.getElementsByName("channel")[0].value != null)
