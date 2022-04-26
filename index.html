@@ -93,17 +93,17 @@ var chatHeight = 500;
 
 //document.getElementById("twitch-chat-embed").height = chatHeight;
 
-		new Twitch.Player("twitch-embed", {
+	var player = Titch.Player("twitch-embed", {
 
 		channel: chan,
 		parent: ["thepixelscript.github.io"]})
+		var selection = document.getElementsByTagName('iframe');
+		var iframes = Array.prototype.slice.call(selection);
 
-		var frame = document.getElementById("twitch-embed")
-		var frameChild = frame.firstElementChild
-		frameChild.style = "width:100%;"
-		var frame = document.getElementById("twitch-chat-embed")
-		var frameChild = frame.firstElementChild
-		frameChild.style = "width:100%;"
+		iframes.forEach(function(iframe) {
+iframe.style = "width:100%;"
+		});
+
 	//	document.getElementById("twitch-embed").width = wid;
 
 	//	document.getElementById("twitch-embed").height = hid*.75;
@@ -138,13 +138,12 @@ var chatHeight = 500;
 		parent: ["thepixelscript.github.io"]})
 
 
-		var frame = document.getElementById("twitch-chat-embed")
-		var frameChild = frame.firstElementChild
-		frameChild.style = "width:100%;"
+		var selection = document.getElementsByTagName('iframe');
+		var iframes = Array.prototype.slice.call(selection);
 
-		var frame = document.getElementById("twitch-embed")
-		var frameChild = frame.firstElementChild
-		frameChild.style = "width:100%;"
+		iframes.forEach(function(iframe) {
+iframe.style = "width:100%;"
+		});
 	//	document.getElementById("twitch-embed").width = wid;
 
 	//	document.getElementById("twitch-embed").height = hid*.75;
