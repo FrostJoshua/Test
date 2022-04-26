@@ -64,9 +64,8 @@
 					}
 				}
 
-
-
-  setTimeout(function(){queryForm();
+function getchan(){
+	queryForm();
 		if (document.getElementsByName("channel")[0].value != null)
 		{
 var chan = document.getElementsByName("channel")[0].value;
@@ -96,10 +95,17 @@ document.getElementById("twitch-chat-embed").height = chatHeight;
 		document.getElementById("twitch-embed").width = wid;
 
 		document.getElementById("twitch-embed").height = hid*.75;
+};
 }
-else {
 
-var chaturl = "https://www.twitch.tv/embed/monstercat/chat?parent=thepixelscript.github.io";
+  setTimeout(function(){queryForm();
+		if (document.getElementsByName("channel")[0].value != null)
+		{
+
+var chan = document.getElementsByName("channel")[0].value;
+var chaturl = "https://www.twitch.tv/embed/";
+chaturl += chan;
+chaturl += "/chat?parent=thepixelscript.github.io";
 var bod = document.getElementById("bod")
 var wid = window.innerWidth
 wid -= 80
@@ -115,15 +121,19 @@ var chatHeight = 500;
 
 document.getElementById("twitch-chat-embed").height = chatHeight;
 
-	new Twitch.Player("twitch-embed", {
-	width: wid,
-	height: hid,
-	channel: "monstercat",
-	parent: ["thepixelscript.github.io"]})
-	document.getElementById("twitch-embed").width = wid;
+		new Twitch.Player("twitch-embed", {
+		width: wid,
+		height: hid,
+		channel: chan,
+		parent: ["thepixelscript.github.io"]})
+		document.getElementById("twitch-embed").width = wid;
 
-	document.getElementById("twitch-embed").height = hid*.75;
-
+		document.getElementById("twitch-embed").height = hid*.75;
+}
+else{
+	var chan = "monstercat";
+	document.getElementById("channel").value = chan;
+	getchan();
 }
 
 ;}, 1000);
