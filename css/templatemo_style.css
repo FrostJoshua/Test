@@ -11,18 +11,17 @@ http://www.templatemo.com/preview/templatemo_421_raleway
 .twitch-embed
 {
   width: 100%;
-  height:500px;
-  resize:both;
-  overflow:auto;
+height: 50%;
+  resize: both;
+  overflow: auto;
 
 }
 
 .twitch-chat-embed {
   width: 100%;
-  height:500px;
-  resize:both;
-  overflow:auto;
-
+  height: 500px;
+  resize: both;
+  overflow: auto;
 }
 .overlay h4 {
     position: relative;

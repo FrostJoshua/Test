@@ -44,6 +44,7 @@
 
 
 				var queryForm = function(settings){
+
 					var reset = settings && settings.reset ? settings.reset : false;
 					var self = window.location.toString();
 					var querystring = self.split("?");
@@ -77,7 +78,7 @@ var chan = document.getElementsByName("channel")[0].value;
 var chaturl = "https://www.twitch.tv/embed/";
 chaturl += chan;
 chaturl += "/chat?parent=thepixelscript.github.io";
-var bod = document.getElementById("bod")
+
 var wid = window.innerWidth
 wid -= 80
 var hid = window.innerHeight
@@ -96,6 +97,10 @@ var chatHeight = 500;
 
 		channel: chan,
 		parent: ["thepixelscript.github.io"]})
+
+		var frame = document.getElementById("twitch-embed")
+		var frameChild = frame.firstElementChild
+		frameChild.style = "width:100%;"
 	//	document.getElementById("twitch-embed").width = wid;
 
 	//	document.getElementById("twitch-embed").height = hid*.75;
@@ -128,6 +133,9 @@ var chatHeight = 500;
 		new Twitch.Player("twitch-embed", {
 		channel: chan,
 		parent: ["thepixelscript.github.io"]})
+		var frame = document.getElementById("twitch-embed")
+		var frameChild = frame.firstElementChild
+		frameChild.style = "width:100%;"
 	//	document.getElementById("twitch-embed").width = wid;
 
 	//	document.getElementById("twitch-embed").height = hid*.75;
