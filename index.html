@@ -64,6 +64,7 @@
 					}
 				}
 
+				window.onresize = getchan();
 function getchan(){
 	queryForm();
 		if (document.getElementsByName("channel")[0].value != null)
@@ -133,6 +134,7 @@ document.getElementById("twitch-chat-embed").height = chatHeight;
 else{
 	var chan = "monstercat";
 	document.getElementById("channel").value = chan;
+
 	getchan();
 }
 
