@@ -101,6 +101,9 @@ var chatHeight = 500;
 		var frame = document.getElementById("twitch-embed")
 		var frameChild = frame.firstElementChild
 		frameChild.style = "width:100%;"
+		var frame = document.getElementById("twitch-chat-embed")
+		var frameChild = frame.firstElementChild
+		frameChild.style = "width:100%;"
 	//	document.getElementById("twitch-embed").width = wid;
 
 	//	document.getElementById("twitch-embed").height = hid*.75;
@@ -133,6 +136,12 @@ var chatHeight = 500;
 		new Twitch.Player("twitch-embed", {
 		channel: chan,
 		parent: ["thepixelscript.github.io"]})
+
+
+		var frame = document.getElementById("twitch-chat-embed")
+		var frameChild = frame.firstElementChild
+		frameChild.style = "width:100%;"
+
 		var frame = document.getElementById("twitch-embed")
 		var frameChild = frame.firstElementChild
 		frameChild.style = "width:100%;"
