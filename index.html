@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 	<title>SquadWatch</title>
-
+<input type="hidden" id="channel" name="channel" value="">
 
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -21,36 +21,10 @@
 					<div class="site-branding" style="padding-left:30px">
 
 						<a href="#">	<img src="img/SQUADWATCH.png" alt="" style="height:auto;width:20%;"></a>
-					</div>
 
 
-				<!--
-				<a href="#" class="toggle-nav hidden-md hidden-lg">
-					<i class="fa fa-bars"></i>
-				</a>
-				<div class="col-md-8">
-					<nav id="nav" class="main-navigation hidden-xs hidden-sm">
-						<ul class="main-menu">
-							<li><a class="show-1 active homebutton" href="#">Home</a></li>
-							<li><a class="show-2 aboutbutton" href="#">About Us</a></li>
-							<li><a class="show-3 projectbutton" href="#">Projects</a></li>
-							<li><a class="show-4 blogbutton" href="#">Blog Entries</a></li>
-							<li><a class="show-5 contactbutton" href="#">Contact</a></li>
-						</ul>
-					</nav>
-					<nav class="main-navigation menu-responsive hidden-md hidden-lg">
-						<ul class="main-menu">
-							<li><a class="show-1 active homebutton" href="#">Home</a></li>
-							<li><a class="show-2 aboutbutton" href="#">About Us</a></li>
-							<li><a class="show-3 projectbutton" href="#">Projects</a></li>
-							<li><a class="show-4 blogbutton" href="#">Blog Entries</a></li>
-							<li><a class="show-5 contactbutton" href="#">Contact</a></li>
-						</ul>
 
-					</nav>
-							-->
-							<!-- Add a placeholder for the Twitch embed -->
-
+	</div>
 
 
 	</header>
@@ -64,11 +38,9 @@
         src="https://www.twitch.tv/embed/monstercat/chat?parent=thepixelscript.github.io">
 </iframe>
 
-				<!-- Load the Twitch embed JavaScript file -->
 				<script src="https://embed.twitch.tv/embed/v1.js"></script>
 				<script type="text/javascript">
 
-;
 
 
 				var queryForm = function(settings){
@@ -91,6 +63,8 @@
 						if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param;
 					}
 				}
+
+
 
   setTimeout(function(){queryForm();
 		if (document.getElementsByName("channel")[0].value != null)
@@ -122,7 +96,37 @@ document.getElementById("twitch-chat-embed").height = chatHeight;
 		document.getElementById("twitch-embed").width = wid;
 
 		document.getElementById("twitch-embed").height = hid*.75;
-};}, 2000);
+}
+else {
+
+var chaturl = "https://www.twitch.tv/embed/monstercat/chat?parent=thepixelscript.github.io";
+var bod = document.getElementById("bod")
+var wid = window.innerWidth
+wid -= 80
+var hid = window.innerHeight
+
+document.getElementById("twitch-chat-embed").src = chaturl;
+document.getElementById("twitch-chat-embed").width = wid;
+var chatHeight = hid*.75;
+if (chatHeight < 500)
+{
+var chatHeight = 500;
+}
+
+document.getElementById("twitch-chat-embed").height = chatHeight;
+
+	new Twitch.Player("twitch-embed", {
+	width: wid,
+	height: hid,
+	channel: "monstercat",
+	parent: ["thepixelscript.github.io"]})
+	document.getElementById("twitch-embed").width = wid;
+
+	document.getElementById("twitch-embed").height = hid*.75;
+
+}
+
+;}, 1000);
 
 
 
@@ -146,7 +150,8 @@ document.getElementById("twitch-chat-embed").height = chatHeight;
 			</div>
 
 	</footer>
-	<!-- templatemo 421 raleway -->
+
+
 		<span class="border-top"></span>
 		<span class="border-left"></span>
 		<span class="border-right"></span>
@@ -156,5 +161,5 @@ document.getElementById("twitch-chat-embed").height = chatHeight;
 	<script src="js/jquery.min.js"></script>
 	<script src="js/templatemo_custom.js"></script>
 </body>
-<input type="hidden" name="channel" value="">
+
 </html>
