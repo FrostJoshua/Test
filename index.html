@@ -58,7 +58,7 @@
 
 <div id="bod" style="padding-left:20px;">
 
-				<div id="twitch-embed"></div>
+				<div id="twitch-embed" ></div>
 
 				<iframe id="twitch-chat-embed"
         src="https://www.twitch.tv/embed/monstercat/chat?parent=thepixelscript.github.io">
@@ -106,12 +106,8 @@ var hid = window.innerHeight
 
 document.getElementById("twitch-chat-embed").src = chaturl
 document.getElementById("twitch-chat-embed").width = wid
-if (hid*3<500){
-	document.getElementById("twitch-chat-embed").height = 400
-}
-else{
-document.getElementById("twitch-chat-embed").height = hid*.3
-}
+document.getElementById("twitch-chat-embed").height = hid*.75
+
 		new Twitch.Player("twitch-embed", {
 		width: wid,
 		height: hid,
@@ -119,7 +115,7 @@ document.getElementById("twitch-chat-embed").height = hid*.3
 		parent: ["thepixelscript.github.io"]})
 		document.getElementById("twitch-embed").width = wid
 
-		document.getElementById("twitch-embed").height = hid*.6
+		document.getElementById("twitch-embed").height = hid*.75
 };}, 2000);
 
 
@@ -138,29 +134,18 @@ document.getElementById("twitch-chat-embed").height = hid*.3
 
 
 	<footer class="site-footer container text-center">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="main-footer">
-					<ul class="social">
-						<li><a href="#">Discord</a></li>
-						<li><a href="#">Twitter</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="row">
+
 			<div class="col-md-12 copyright">
 				<p>Copyright &copy; 2022 <a href="#">SquadWatch</a></p>
 			</div>
-		</div>
+
 	</footer>
 	<!-- templatemo 421 raleway -->
-	<span class="border-top"></span>
-	<span class="border-left"></span>
-	<span class="border-right"></span>
-	<span class="border-bottom"></span>
-	<span class="shape-1"></span>
-	<span class="shape-2"></span>
+		<span class="border-top"></span>
+		<span class="border-left"></span>
+		<span class="border-right"></span>
+		<span class="border-bottom"></span>
+
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/templatemo_custom.js"></script>
